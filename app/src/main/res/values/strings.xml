@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">ConceitoDashboard</string>
+    <string name="aguarde">Por favor aguarde...</string>
+    <string name="copyright">Conceito de dashboard com estilo customizado</string>
+    <string name="titulo">Conceito Dashborad</string>
+
+    <!-- Mensagens -->
+    <string name="erro_conexao_indisponivel">Conexão indisponível, por favor ative sua rede móvel ou Wi-Fi.</string>
+    <string name="erro_io">Sistema indisponível no momento.</string>
+
+    <!-- Labels -->
+    <string name="abrirSite">Abrir o Site</string>
+    <string name="menu_luxo">Luxo</string>
+    <string name="menu_esportivos">Esportivos</string>
+    <string name="menu_classicos">Clássicos</string>
+    <string name="menu_sobre">Sobre</string>
+    <string name="nome">Nome</string>
+    <string name="descricao">Descrição</string>
 </resources>
