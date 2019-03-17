@@ -63,3 +63,9 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
+
+#Imagens do projeto
+app/src/main/res/drawable
+app/src/main/res/drawable-hdpi
+app/src/main/res/drawable-mdpi
+app/src/main/res/drawable-xlarge
