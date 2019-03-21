@@ -16,4 +16,8 @@
     <string name="menu_sobre">Sobre</string>
     <string name="nome">Nome</string>
     <string name="descricao">Descrição</string>
+    <string name="classicos">Clássicos</string>
+    <string name="luxo">Luxo</string>
+    <string name="esportivos">Esportivos</string>
+    <string name="sobre">Sobre</string>
 </resources>

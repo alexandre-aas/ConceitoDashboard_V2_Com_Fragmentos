@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/temapadrao">
+        android:theme="@style/temapadrao" >
         <activity android:name=".ConceitoDashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,4 @@
 
 </manifest>
 
-<!-- >
-android:theme="@style/AppTheme = tema padrão na criação do projeto
-
-</-->
+<!-- >android:theme="@style/AppTheme = tema padrão na criação do projeto</-->

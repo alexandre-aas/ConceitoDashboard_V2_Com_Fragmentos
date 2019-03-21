@@ -5,69 +5,73 @@
     android:id="@+id/layoutPrincipal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_weight="1"
     tools:context=".ConceitoDashboardActivity">
-
-    <Button
-        android:id="@+id/btnLuxo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="232dp"
-        android:background="null"
-        android:drawableTop="@drawable/btn_carro_luxo_on"
-        android:drawablePadding="10dp"
-        android:text="Buttom"
-        android:textColor="@color/preto"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnClassicos"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnClassicos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="232dp"
-        android:background="null"
+        android:background="@null"
         android:drawableTop="@drawable/btn_carro_classico_on"
         android:drawablePadding="10dp"
-        android:text="Buttom"
+        android:text="@string/classicos"
         android:textColor="@color/preto"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/btnLuxo"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLuxo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@null"
+        android:drawableTop="@drawable/btn_carro_luxo_on"
+        android:drawablePadding="10dp"
+        android:text="@string/luxo"
+        android:textColor="@color/preto"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnEsportivos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="228dp"
-        android:background="null"
+        android:layout_marginBottom="5dp"
+        android:background="@null"
         android:drawableTop="@drawable/btn_carro_esportivo_on"
         android:drawablePadding="10dp"
-        android:text="Buttom"
+        android:text="@string/esportivos"
         android:textColor="@color/preto"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnSobre"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnSobre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="228dp"
-        android:background="null"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="5dp"
+        android:background="@null"
         android:drawableTop="@drawable/btn_sobre_on"
         android:drawablePadding="10dp"
-        android:text="Buttom"
+        android:text="@string/sobre"
         android:textColor="@color/preto"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnEsportivos" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
+
+<!--
+    <include layout="@layout/header_activity_principal_dashboard" />
+
+    <include layout="@layout/footer_activity_principal_dashboard" />
+
+
+-->
