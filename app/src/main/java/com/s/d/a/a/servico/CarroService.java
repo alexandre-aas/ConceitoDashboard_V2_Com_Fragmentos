@@ -1,17 +1,19 @@
 package com.s.d.a.a.servico;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import android.content.Context;
+import android.util.Log;
+
+import com.s.d.a.a.conceitodashboard.Carro;
+import com.s.d.a.a.androidutils.XMLUtils;
+import com.s.d.a.a.androidutils.HttpHelper;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
-import android.content.Context;
-import android.util.Log;
-import com.s.d.a.a.conceitodashboard.Carro;
-import com.s.d.a.a.utils.HttpHelper;
-import com.s.d.a.a.utils.XMLUtils;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class CarroService {
     private static final String URL = "http://www.livroandroid.com.br/livro/carros/carros_{tipo}.xml";

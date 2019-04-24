@@ -5,8 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/fundo"
     tools:context=".ListaCarrosActivity">
 
+    <include layout="@layout/header_activity_principal_dashboard" />
 
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:cacheColorHint="@color/transparente" />
+
+    <include layout="@layout/footer_activity_principal_dashboard" />
     
 </android.support.constraint.ConstraintLayout>

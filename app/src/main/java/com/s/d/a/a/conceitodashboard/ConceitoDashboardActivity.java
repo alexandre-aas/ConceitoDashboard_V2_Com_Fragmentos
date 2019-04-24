@@ -1,10 +1,12 @@
 package com.s.d.a.a.conceitodashboard;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.content.Intent;
+
+import com.s.d.a.a.androidutils.Utilitaria;
 
 
 public class ConceitoDashboardActivity extends AppCompatActivity implements View.OnClickListener {
@@ -34,7 +36,7 @@ public class ConceitoDashboardActivity extends AppCompatActivity implements View
 
     @Override
     public void onClick(View view) {
-        /** boolean coneccaoInterntOk = AndroidUtils.isNetworkAvailable(this);
+        boolean coneccaoInterntOk = Utilitaria.isNetworkAvailable(this);
 
         if(coneccaoInterntOk) {
             Intent intent = new Intent(this, ListaCarrosActivity.class);
@@ -50,8 +52,8 @@ public class ConceitoDashboardActivity extends AppCompatActivity implements View
             } else if(view == btnSobre) {
                 startActivity(new Intent(this, SobreActivity.class));
             }
-        } else {
-            AndroidUtils.alertDialog(this, R.string.erro_conexao_indisponivel);
-        }*/
+       } else {
+            Utilitaria.alertDialog(this, R.string.erro_conexao_indisponivel);
+        }
     }
 }
