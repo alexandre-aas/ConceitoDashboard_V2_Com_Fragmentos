@@ -15,6 +15,7 @@
         android:theme="@style/temapadrao">
         <activity android:name=".SobreActivity"></activity>
         <activity android:name=".ListaCarrosActivity" />
+        <activity android:name=".InformacoesCarros"></activity>
         <activity android:name=".ConceitoDashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

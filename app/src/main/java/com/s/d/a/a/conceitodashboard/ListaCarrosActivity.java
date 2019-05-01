@@ -1,28 +1,28 @@
 package com.s.d.a.a.conceitodashboard;
 
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.os.AsyncTask;
+//import android.app.ProgressDialog;
+//import android.content.Context;
+//import android.os.AsyncTask;
+
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.s.d.a.a.androidutils.Utilitaria;
-import com.s.d.a.a.servico.BuscaCarrosService;
+import com.s.d.a.a.androidutils.Transacao;
 import com.s.d.a.a.servico.CarroService;
 
-import java.io.IOException;
 import java.util.List;
 
-//biblioteca
+//import android.support.v7.app.AppCompatActivity;
+//import android.util.Log;
+//import com.s.d.a.a.androidutils.Utilitaria;
+//import java.io.IOException;
 
-
-public class ListaCarrosActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class ListaCarrosActivity extends ExecutarTransacoes implements AdapterView.OnItemClickListener, Transacao {
     private ListView listView;
+    private List<Carro> carros;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,28 +32,50 @@ public class ListaCarrosActivity extends AppCompatActivity implements AdapterVie
         listView = findViewById(R.id.listview);
         listView.setOnItemClickListener(this);
 
-        boolean redeOk = Utilitaria.isNetworkAvailable(this);
-
-        if (redeOk){
-            String tipo = getIntent().getStringExtra("tipo");
-
-            //Usando a classe AsyncTask
-            new BuscaCarrosService(this, tipo).execute();
-
-        } else{
-            Utilitaria.alertDialog(this, R.string.erro_conexao_indisponivel);
-        }
+        startTransacao(this);
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int posicao, long id){
         //Ao selecionar o carro, informações serão exibidas
         Carro c = (Carro) parent.getAdapter().getItem(posicao);
-        Toast.makeText(this, "Carro: " + c.nome, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, InformacoesCarros.class);
+        intent.putExtra(Carro.KEY, c);
+        startActivity(intent);
+
+
+
+        //Carro c = (Carro) parent.getAdapter().getItem(posicao);
+        //Toast.makeText(this, "Carro: " + c.nome, Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    public void executar() throws Exception {
+        //Busca carros em uma Thread
+        this.carros = CarroService.getCarros(this, Carro.TIPO_ESPORTIVOS);
+    }
 
-    protected abstract class BuscaCarrosServiceInner extends AsyncTask<Void, Integer, List<Carro>>{
+    @Override
+    public void atualizarView() {
+        //Atualiza os carros na Thread principal
+        if (carros != null){
+            listView.setAdapter(new CarroAdapter(this, carros));
+        }
+    }
+
+    /** boolean redeOk = Utilitaria.isNetworkAvailable(this);
+
+     if (redeOk){
+     String tipo = getIntent().getStringExtra("tipo");
+
+     //Usando a classe AsyncTask
+     new BuscaCarrosService(this, tipo).execute();
+
+     } else{
+     Utilitaria.alertDialog(this, R.string.erro_conexao_indisponivel);
+     } */
+
+    /** protected abstract class BuscaCarrosServiceInner extends AsyncTask<Void, Integer, List<Carro>>{
         private static  final String  TAG = "ListaCarros";
         private Context contexto;
         private ProgressDialog progresso;
@@ -90,7 +112,7 @@ public class ListaCarrosActivity extends AppCompatActivity implements AdapterVie
         protected void onPostExecute(List<Carro> carros){
             listView.setAdapter(new CarroAdapter(ListaCarrosActivity.this, carros));
         }
-    }
+    } */
 
 }
 
