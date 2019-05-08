@@ -10,11 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.view.View.OnClickListener;
 
 import com.s.d.a.a.androidutils.DownloadImagemUtil;
 
-public class InformacoesCarros extends Activity implements View.OnClickListener {
-    private static final String TAG = "livroandroid";
+public class InformacoesCarros extends Activity implements OnClickListener {
+    private static final String TAG = "ConceitoDashboard";
     private Carro carro;
 
     @Override

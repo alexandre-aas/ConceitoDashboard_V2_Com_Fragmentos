@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
 
 import com.s.d.a.a.androidutils.Transacao;
 import com.s.d.a.a.servico.CarroService;
@@ -20,7 +21,7 @@ import java.util.List;
 //import com.s.d.a.a.androidutils.Utilitaria;
 //import java.io.IOException;
 
-public class ListaCarrosActivity extends ExecutarTransacoes implements AdapterView.OnItemClickListener, Transacao {
+public class ListaCarrosActivity extends ExecutarTransacoes implements OnItemClickListener, Transacao {
     private ListView listView;
     private List<Carro> carros;
 
@@ -28,6 +29,7 @@ public class ListaCarrosActivity extends ExecutarTransacoes implements AdapterVi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_carros);
+
 
         listView = findViewById(R.id.listview);
         listView.setOnItemClickListener(this);
