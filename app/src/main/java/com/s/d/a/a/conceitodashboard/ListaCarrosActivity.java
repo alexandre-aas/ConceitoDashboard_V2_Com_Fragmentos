@@ -8,8 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
 
 import com.s.d.a.a.androidutils.Transacao;
 import com.s.d.a.a.servico.CarroService;
@@ -24,6 +24,7 @@ import java.util.List;
 public class ListaCarrosActivity extends ExecutarTransacoes implements OnItemClickListener, Transacao {
     private ListView listView;
     private List<Carro> carros;
+    private String tipo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,9 @@ public class ListaCarrosActivity extends ExecutarTransacoes implements OnItemCli
 
         listView = findViewById(R.id.listview);
         listView.setOnItemClickListener(this);
+
+        //armazena tipo do veiculo selecionado
+        tipo = getIntent().getStringExtra("tipo");
 
         startTransacao(this);
     }
@@ -54,7 +58,8 @@ public class ListaCarrosActivity extends ExecutarTransacoes implements OnItemCli
     @Override
     public void executar() throws Exception {
         //Busca carros em uma Thread
-        this.carros = CarroService.getCarros(this, Carro.TIPO_ESPORTIVOS);
+        //this.carros = CarroService.getCarros(this, Carro.TIPO_ESPORTIVOS);
+        this.carros = CarroService.getCarros(this, tipo);
     }
 
     @Override
