@@ -16,7 +16,7 @@ import java.util.List;
 
 public class CarroAdapter extends BaseAdapter {
 
-    protected static final String TAG = "livroandroid";
+    protected static final String TAG = "ConceitoDashboard";
     private LayoutInflater inflater;
     private final List<Carro> carros;
     private final Activity context;
@@ -57,6 +57,7 @@ public class CarroAdapter extends BaseAdapter {
             view = inflater.inflate(layout, null);
             view.setTag(holder);
             holder.tNome = (TextView) view.findViewById(R.id.tNome);
+            holder.tDesc = (TextView) view.findViewById(R.id.tDesc);
             holder.imgFoto = (ImageView) view.findViewById(R.id.img);
             holder.progress = (ProgressBar) view.findViewById(R.id.progress);
         } else {
@@ -65,8 +66,14 @@ public class CarroAdapter extends BaseAdapter {
         }
         holder.imgFoto.setImageBitmap(null);
         Carro c = carros.get(posicao);
-        // Agora que temos a view atualizada os valores
+        // Agora que temos a view atualiza os valores
         holder.tNome.setText(c.nome);
+
+        //Orientação Paisagem, mostra a descrição do veiculo na lista
+        if (holder.tDesc != null){
+            holder.tDesc.setText(c.desc);
+        }
+
         downloader.download(context, c.urlFoto, holder.imgFoto, holder.progress);
 
         return view;
@@ -75,6 +82,7 @@ public class CarroAdapter extends BaseAdapter {
     // Design Patter "ViewHolder" para Android
     static class ViewHolder {
         TextView tNome;
+        TextView tDesc;
         ImageView imgFoto;
         ProgressBar progress;
     }

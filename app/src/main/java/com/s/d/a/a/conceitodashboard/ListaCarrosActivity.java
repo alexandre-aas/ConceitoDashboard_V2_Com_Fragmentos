@@ -6,6 +6,7 @@ package com.s.d.a.a.conceitodashboard;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -22,6 +23,7 @@ import java.util.List;
 //import java.io.IOException;
 
 public class ListaCarrosActivity extends ExecutarTransacoes implements OnItemClickListener, Transacao {
+    private static final String TAG = "ConceitoDashboard";
     private ListView listView;
     private List<Carro> carros;
     private String tipo;
@@ -38,7 +40,31 @@ public class ListaCarrosActivity extends ExecutarTransacoes implements OnItemCli
         //armazena tipo do veiculo selecionado
         tipo = getIntent().getStringExtra("tipo");
 
-        startTransacao(this);
+        //Recupera a lsita de carros salva
+        carros = (List<Carro>) getLastNonConfigurationInstance();
+
+        Log.i(TAG,"Lendo estado: getLastNonConfigurationInstance()");
+        if (carros == null && savedInstanceState != null) {
+            // Recupera a lista de carros salva pelo onSaveInstanceState(bundle)
+            ListaDeCarros lista = (ListaDeCarros) savedInstanceState.getSerializable(ListaDeCarros.KEY);
+            Log.i(TAG,"Lendo estado: savedInstanceState(carros)");
+            this.carros = lista.carros;
+        }
+
+        if (carros != null) {
+            // Atualiza o ListView diretamente
+            listView.setAdapter(new CarroAdapter(this, carros));
+        } else {
+            startTransacao(this);
+        }
+
+    }
+
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i(TAG,"Salvando Estado: onSaveInstanceState(bundle)");
+        // Salva o estado da tela
+        outState.putSerializable(ListaDeCarros.KEY, new ListaDeCarros(carros));
     }
 
     @Override
@@ -68,6 +94,12 @@ public class ListaCarrosActivity extends ExecutarTransacoes implements OnItemCli
         if (carros != null){
             listView.setAdapter(new CarroAdapter(this, carros));
         }
+    }
+
+    @Override
+    public Object onRetainNonConfigurationInstance() {
+        Log.i(TAG, "Salvando Estado: onRetainNonConfigurationInstance()");
+        return carros;
     }
 
     /** boolean redeOk = Utilitaria.isNetworkAvailable(this);
