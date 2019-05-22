@@ -26,7 +26,12 @@ public class CarroAdapter extends BaseAdapter {
         this.context = context;
         this.carros = carros;
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        downloader = new DownloadImagemUtil(context);
+        //downloader = new DownloadImagemUtil(context);
+
+        // Recupera o objeto global da aplicação
+        AplicacaoDashboard application = (AplicacaoDashboard) context.getApplication();
+        // Utiliza este objeto para recuperar a classe que faz o download de imagens
+        downloader = application.getDownloadImagemUtil();
     }
 
     @Override
