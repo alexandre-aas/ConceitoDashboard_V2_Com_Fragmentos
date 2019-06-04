@@ -6,7 +6,9 @@
     android:gravity="center"
     android:background="@color/fundo"
     >
-    <include layout="@layout/include_header" />
+
+    <include layout="@layout/header_activity_principal_dashboard" />
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
@@ -30,7 +32,7 @@
         </LinearLayout>
         <!-- Bloco Direita -->
         <LinearLayout
-            android:id="@+id/layoutDireita"
+            android:id="@+id/layoutDetalhes"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:padding="10dp"
@@ -64,5 +66,7 @@
             </ScrollView>
         </LinearLayout>
     </LinearLayout>
-    <include layout="@layout/include_footer" />
+
+    <include layout="@layout/footer_activity_principal_dashboard" />
+
 </LinearLayout>

@@ -7,7 +7,7 @@ import android.util.Log;
 
 import com.s.d.a.a.androidutils.R;
 import com.s.d.a.a.androidutils.Utilitaria;
-import com.s.d.a.a.conceitodashboard.Carro;
+import com.s.d.a.a.conceitodashboard_v2_com_fragmentos.Carro;
 
 import java.io.IOException;
 import java.util.List;

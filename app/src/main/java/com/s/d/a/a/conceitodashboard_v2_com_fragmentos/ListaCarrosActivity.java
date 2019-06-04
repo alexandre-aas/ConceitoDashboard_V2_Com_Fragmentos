@@ -121,11 +121,12 @@ public class ListaCarrosActivity extends ExecutarTransacoes implements OnItemCli
         }*/
     }
 
-    @Override
+    /** Esse método não existe nos fragmentos v4
+     * @Override
     public Object onRetainNonConfigurationInstance() {
         Log.i(TAG, "Salvando Estado: onRetainNonConfigurationInstance()");
         return carros;
-    }
+    } */
 
     // Detalhes do carro
     private void atualizarDetalhes (Carro carro) {

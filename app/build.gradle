@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.s.d.a.a.conceitodashboard"
+        applicationId "com.s.d.a.a.conceitodashboard_v2_com_fragmentos"
         minSdkVersion 14
         targetSdkVersion 28
         versionCode 1

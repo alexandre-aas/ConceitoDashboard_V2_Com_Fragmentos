@@ -3,7 +3,7 @@ package com.s.d.a.a.servico;
 import android.content.Context;
 import android.util.Log;
 
-import com.s.d.a.a.conceitodashboard.Carro;
+import com.s.d.a.a.conceitodashboard_v2_com_fragmentos.Carro;
 import com.s.d.a.a.androidutils.XMLUtils;
 import com.s.d.a.a.androidutils.HttpHelper;
 

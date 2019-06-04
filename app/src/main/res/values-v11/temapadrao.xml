@@ -1,26 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Tema padrão -->
     <style name="temapadrao" parent="Theme.AppCompat">
-        <item name="android:windowNoTitle">true</item>
+        <item name="android:actionBarStyle">@style/ConceitoDashboardActionBar</item>
     </style>
-
-    <!-- Texto com Fonte 12 -->
-    <style name="texto12">
-        <item name="android:textColor">@color/preto</item>
-        <item name="android:textSize">12sp</item>
+    <style name="ConceitoDashboardActionBar" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:background">@drawable/shape_header</item>
     </style>
-    <style name="texto12Negrito" parent="texto12">
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <!-- Texto com Fonte 14 -->
-    <style name="texto14">
-        <item name="android:textColor">@color/preto</item>
-        <item name="android:textSize">14sp</item>
-    </style>
-    <style name="texto14Negrito" parent="texto14">
-        <item name="android:textStyle">bold</item>
-    </style>
-
 </resources>
+
+
+<!--
+<resources>
+    <style name="temapadrao" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/ConceitoDashboardActionBar</item>
+    </style>
+    <style name="ConceitoDashboardActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/shape_header</item>
+    </style>
+</resources>
+-->
