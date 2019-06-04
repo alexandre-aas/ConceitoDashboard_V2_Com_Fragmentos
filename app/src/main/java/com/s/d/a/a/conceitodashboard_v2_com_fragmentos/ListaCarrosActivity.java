@@ -1,18 +1,22 @@
-package com.s.d.a.a.conceitodashboard;
+package com.s.d.a.a.conceitodashboard_v2_com_fragmentos;
 
 //import android.app.ProgressDialog;
 //import android.content.Context;
 //import android.os.AsyncTask;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.s.d.a.a.androidutils.Transacao;
+import com.s.d.a.a.androidutils.DownloadImagemUtil;
 import com.s.d.a.a.servico.CarroService;
 
 import java.util.List;
@@ -69,14 +73,28 @@ public class ListaCarrosActivity extends ExecutarTransacoes implements OnItemCli
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int posicao, long id){
-        //Ao selecionar o carro, informações serão exibidas
         Carro c = (Carro) parent.getAdapter().getItem(posicao);
+        View layoutDetahes = findViewById(R.id.layoutDetalhes);
+        if(layoutDetahes != null) {
+            // Se horizontal, atualiza os detalhes na própria tela
+            atualizarDetalhes(c);
+        } else {
+            // Se vertical, abre outra tela de detalhes
+            Intent intent = new Intent(this, InformacoesCarros.class);
+            intent.putExtra(Carro.KEY, c);
+            startActivity(intent);
+        }
+
+
+
+        //2ª Versão - Ao selecionar o carro, informações serão exibidas
+        /**Carro c = (Carro) parent.getAdapter().getItem(posicao);
         Intent intent = new Intent(this, InformacoesCarros.class);
         intent.putExtra(Carro.KEY, c);
-        startActivity(intent);
+        startActivity(intent);*/
 
 
-
+        //1ª Versão
         //Carro c = (Carro) parent.getAdapter().getItem(posicao);
         //Toast.makeText(this, "Carro: " + c.nome, Toast.LENGTH_SHORT).show();
     }
@@ -90,16 +108,48 @@ public class ListaCarrosActivity extends ExecutarTransacoes implements OnItemCli
 
     @Override
     public void atualizarView() {
-        //Atualiza os carros na Thread principal
+        // Atualiza os carros na thread principal
+        if (carros != null && !carros.isEmpty()) {
+            listView.setAdapter(new CarroAdapter(this, carros));
+            Carro c = carros.get(0);
+            atualizarDetalhes(c);
+        }
+
+        /** 1ª Versão - Atualiza os carros na Thread principal
         if (carros != null){
             listView.setAdapter(new CarroAdapter(this, carros));
-        }
+        }*/
     }
 
     @Override
     public Object onRetainNonConfigurationInstance() {
         Log.i(TAG, "Salvando Estado: onRetainNonConfigurationInstance()");
         return carros;
+    }
+
+    // Detalhes do carro
+    private void atualizarDetalhes (Carro carro) {
+        View layoutDetalhes = findViewById(R.id.layoutDetalhes);
+        if(layoutDetalhes != null) {
+            Log.i(TAG, "Exibindo carro: " + carro.nome);
+            TextView tHeader = (TextView) findViewById(R.id.tHeader);
+            TextView tDescDetalhes = (TextView) findViewById(R.id.tDescDetalhes);
+            if(tDescDetalhes != null) {
+                tDescDetalhes.setText(carro.desc);
+            }
+            if(tHeader != null) {
+                tHeader.setText(carro.nome);
+            }
+
+            // Lê a imagem do cache
+            ImageView img = findViewById(R.id.imgDetalhes);
+            AplicacaoDashboard application = (AplicacaoDashboard) getApplication();
+            DownloadImagemUtil downloader = application.getDownloadImagemUtil();
+            Bitmap bitmap = downloader.getBitmap(carro.urlFoto);
+            if(img != null && bitmap != null) {
+                img.setImageBitmap(bitmap);
+            }
+        }
     }
 
     /** boolean redeOk = Utilitaria.isNetworkAvailable(this);

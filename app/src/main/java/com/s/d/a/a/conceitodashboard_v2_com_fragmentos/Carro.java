@@ -1,4 +1,5 @@
-package com.s.d.a.a.conceitodashboard;
+package com.s.d.a.a.conceitodashboard_v2_com_fragmentos;
+
 import java.io.Serializable;
 
 public class Carro implements Serializable{

@@ -1,4 +1,4 @@
-package com.s.d.a.a.conceitodashboard;
+package com.s.d.a.a.conceitodashboard_v2_com_fragmentos;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.s.d.a.a.conceitodashboard", appContext.getPackageName());
+        assertEquals("com.s.d.a.a.conceitodashboard_v2_com_fragmentos", appContext.getPackageName());
     }
 }

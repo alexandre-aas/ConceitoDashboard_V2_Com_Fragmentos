@@ -1,7 +1,7 @@
-package com.s.d.a.a.conceitodashboard;
+package com.s.d.a.a.conceitodashboard_v2_com_fragmentos;
 
-import android.app.Activity;
 import android.os.AsyncTask;
+import android.support.v4.app.FragmentActivity;
 
 import com.s.d.a.a.androidutils.Transacao;
 import com.s.d.a.a.androidutils.TransacaoTask;
@@ -9,7 +9,7 @@ import com.s.d.a.a.androidutils.TransacaoTask;
 import static com.s.d.a.a.androidutils.Utilitaria.alertDialog;
 import static com.s.d.a.a.androidutils.Utilitaria.isNetworkAvailable;
 
-public class ExecutarTransacoes extends Activity {
+public class ExecutarTransacoes extends FragmentActivity {
     private TransacaoTask task;
     protected void alert(int mensagem) {
         alertDialog(this, mensagem);
