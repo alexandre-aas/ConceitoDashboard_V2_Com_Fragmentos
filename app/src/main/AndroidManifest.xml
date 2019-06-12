@@ -11,37 +11,17 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/temapadrao">
-        <activity android:name=".SobreActivity"></activity>
-        <activity android:name=".ListaCarrosActivity" />
-        <activity android:name=".InformacoesCarros"></activity>
-        <activity android:name=".ConceitoDashboardActivity">
+        <activity android:name=".Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.ListaCarrosActivity"></activity>
+        <activity android:name=".activities.InformacoesCarrosActivity" />
+        <activity android:name=".activities.SobreActivity"></activity>
+        <activity android:name=".activities.v11.ListaCarrosTabletActivity" />
     </application>
 
 </manifest>
-
-<!--
-primeira configuração application
-<application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/temapadrao">
-
-        ***************************************
-        <activity android:name=".SobreActivity"></activity>
-        <activity android:name=".ListaCarrosActivity" />
-        <activity android:name=".InformacoesCarros"></activity>
-        <activity android:name=".ConceitoDashboardActivity">
-
-        android:allowBackup="true"
-        android:supportsRtl="true"
-
--->

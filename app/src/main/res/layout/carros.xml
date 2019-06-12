@@ -7,11 +7,13 @@
     android:background="@color/fundo"
     >
     <include layout="@layout/header_activity_principal_dashboard" />
-    <fragment
+    <LinearLayout
+        android:id="@+id/layoutEsquerda"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        class="com.s.d.a.a.conceitodashboard_v2_com_fragmentos.fragmentos.SobreFragmento"
-        />
+        >
+        <!-- Fragment aqui -->
+    </LinearLayout>
     <include layout="@layout/footer_activity_principal_dashboard" />
 </LinearLayout>

@@ -11,7 +11,7 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:drawablePadding="10dp"
-            android:drawableTop="@drawable/btn_carro_classico_on"
+            android:drawableTop="@drawable/btn_carro_classico"
             android:text="@string/menu_classicos"
             android:textColor="@color/preto"
             android:textStyle="bold" />
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:drawablePadding="10dp"
-            android:drawableTop="@drawable/btn_carro_luxo_on"
+            android:drawableTop="@drawable/btn_carro_luxo"
             android:text="@string/menu_luxo"
             android:textColor="@color/preto"
             android:textStyle="bold" />
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:drawablePadding="10dp"
-            android:drawableTop="@drawable/btn_carro_esportivo_on"
+            android:drawableTop="@drawable/btn_carro_esportivo"
             android:text="@string/menu_esportivos"
             android:textColor="@color/preto"
             android:textStyle="bold" />
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:drawablePadding="10dp"
-            android:drawableTop="@drawable/btn_sobre_on"
+            android:drawableTop="@drawable/btn_sobre"
             android:text="@string/menu_sobre"
             android:textColor="@color/preto"
             android:textStyle="bold" />

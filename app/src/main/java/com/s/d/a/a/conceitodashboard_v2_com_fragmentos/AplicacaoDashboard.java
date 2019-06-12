@@ -24,9 +24,11 @@ public class AplicacaoDashboard extends Application {
         // Salva a instância para termos acesso como Singleton
         instance = this;
     }
+
     public DownloadImagemUtil getDownloadImagemUtil() {
         return downloader;
     }
+
     @Override
     public void onTerminate() {
         super.onTerminate();

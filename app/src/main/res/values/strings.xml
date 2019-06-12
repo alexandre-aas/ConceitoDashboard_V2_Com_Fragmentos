@@ -10,6 +10,8 @@
 
     <!-- Labels -->
     <string name="abrirSite">Abrir o Site</string>
+    <string name="atualizar">Atualizar</string>
+    <string name="busca">Buscar</string>
     <string name="menu_luxo">Luxo</string>
     <string name="menu_esportivos">Esportivos</string>
     <string name="menu_classicos">Clássicos</string>

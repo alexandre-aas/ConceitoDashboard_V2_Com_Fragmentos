@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
+    <!-- Bloco 1 -->
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:padding="2dp"
+        android:background="@drawable/box_fundo"
+        >
+        <fragment
+            android:id="@+id/fragDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.s.d.a.a.conceitodashboard_v2_com_fragmentos.fragmentos.ConceitoDashboardFragmento"
+            >
+            <!-- Preview: layout=@layout/dashboard -->
+        </fragment>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutFragSobre"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@drawable/box_fundo"
+        >
+        <fragment
+            android:id="@+id/fragSobre"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.s.d.a.a.conceitodashboard_v2_com_fragmentos.fragmentos.SobreFragmento"
+            />
+    </LinearLayout>
+</LinearLayout>

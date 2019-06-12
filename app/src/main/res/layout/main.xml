@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:gravity="center"
     android:background="@color/fundo"
-    >
+    android:gravity="center"
+    android:orientation="vertical" >
+
     <include layout="@layout/header_activity_principal_dashboard" />
+
     <fragment
-        android:layout_width="fill_parent"
+        android:id="@+id/ConceitoDashboardActivity"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        class="com.s.d.a.a.conceitodashboard_v2_com_fragmentos.fragmentos.SobreFragmento"
-        />
+        class="com.s.d.a.a.conceitodashboard_v2_com_fragmentos.activities.ConceitoDashboardActivity" >
+    </fragment>
+
     <include layout="@layout/footer_activity_principal_dashboard" />
+
 </LinearLayout>

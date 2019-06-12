@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    android:gravity="center"
+    android:orientation="horizontal" >
+    <!-- Bloco Esquerda -->
+    <LinearLayout
+        android:id="@+id/layoutEsquerda"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
+        android:layout_weight="3"
+        android:background="@drawable/box_fundo"
+        android:orientation="vertical" >
+        <!-- Fragment que lista os carros aqui -->
+    </LinearLayout>
+    <!-- Bloco Direita -->
+    <LinearLayout
+        android:id="@+id/layoutDireita"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
+        android:layout_weight="8"
+        android:background="@drawable/box_fundo"
+        android:orientation="vertical" >
+        <!-- Fragment com os detalhes do carros aqui -->
+    </LinearLayout>
+</LinearLayout>

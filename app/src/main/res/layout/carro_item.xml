@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="left|center_vertical">
-
+    android:layout_gravity="left|center_vertical"
+    >
     <!-- Layout com Imagem do Carro, Nome e Descrição -->
     <LinearLayout
         android:layout_width="fill_parent"
@@ -72,5 +71,4 @@
             android:layout_marginRight="10dp"
             />
     </LinearLayout>
-
-</android.support.constraint.ConstraintLayout>
+</FrameLayout>
