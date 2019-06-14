@@ -1,9 +1,10 @@
 package com.s.d.a.a.conceitodashboard_v2_com_fragmentos;
 
-import android.app.Activity;
 import android.os.Bundle;
 
-public class Main extends Activity {
+import com.s.d.a.a.conceitodashboard_v2_com_fragmentos.activities.ConceitoDashboardActivity;
+
+public class Main extends ConceitoDashboardActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

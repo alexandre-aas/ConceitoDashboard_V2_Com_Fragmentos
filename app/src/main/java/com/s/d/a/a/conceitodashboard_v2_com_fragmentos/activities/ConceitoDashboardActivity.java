@@ -26,7 +26,7 @@ public class ConceitoDashboardActivity extends FragmentActivity {
         }
         // Ativa a cor de fundo na ActionBar
         if(Utilitaria.isAndroid_3()) {
-//			ActionBarUtil.setBackgroundImage(this);
+			//ActionBarUtil.setBackgroundImage(this);
         }
     }
     protected void alert(int mensagem) {

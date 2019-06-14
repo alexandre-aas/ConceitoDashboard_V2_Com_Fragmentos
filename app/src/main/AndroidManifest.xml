@@ -21,6 +21,7 @@
         <activity android:name=".activities.ListaCarrosActivity"></activity>
         <activity android:name=".activities.InformacoesCarrosActivity" />
         <activity android:name=".activities.SobreActivity"></activity>
+        <activity android:name=".activities.ConceitoDashboardActivity" />
         <activity android:name=".activities.v11.ListaCarrosTabletActivity" />
     </application>
 

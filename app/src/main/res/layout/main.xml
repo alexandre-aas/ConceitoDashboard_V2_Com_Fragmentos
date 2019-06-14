@@ -9,11 +9,11 @@
     <include layout="@layout/header_activity_principal_dashboard" />
 
     <fragment
-        android:id="@+id/ConceitoDashboardActivity"
+        android:id="@+id/fragmentoDashboard"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        class="com.s.d.a.a.conceitodashboard_v2_com_fragmentos.activities.ConceitoDashboardActivity" >
+        class="com.s.d.a.a.conceitodashboard_v2_com_fragmentos.fragmentos.ConceitoDashboardFragmento" >
     </fragment>
 
     <include layout="@layout/footer_activity_principal_dashboard" />

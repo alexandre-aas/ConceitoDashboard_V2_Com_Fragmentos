@@ -12,12 +12,11 @@ public class ListaCarrosActivity extends ConceitoDashboardActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.carros);
 
-        // Não faz mais nada porque o FragmentDetalhesCarro faz tudo
         if (savedInstanceState == null) {
             // Somente insere a primeira vez
             // Porque a FragmentTransaction persiste durante a troca de orientação
             ListaCarrosFragmento fragLista = new ListaCarrosFragmento();
-            // Passa os parâmetros para o fragment, que contém o tipo do carro selecionado
+            // Passa os parâmetros para o fragmento, que contém o tipo do carro selecionado
             // Por isso estamos utilizando uma transação, pois pelo XML não é
             // possível passar os parâmetros
             Bundle args = getIntent().getExtras();

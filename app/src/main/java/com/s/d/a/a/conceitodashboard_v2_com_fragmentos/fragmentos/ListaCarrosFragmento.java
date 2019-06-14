@@ -39,7 +39,7 @@ public class ListaCarrosFragmento extends ConceitoDashboardFragmento implements 
             tipo = Carro.TIPO_LUXO;
         }
         listView = view.findViewById(R.id.listview);
-        listView.setOnItemClickListener((android.widget.AdapterView.OnItemClickListener)this);
+        listView.setOnItemClickListener(this);
 
         // Configura o id do ProgressBar, para ser ligado/desligado ao abrir transação
         setProgressId(R.id.progressLista);
@@ -59,7 +59,7 @@ public class ListaCarrosFragmento extends ConceitoDashboardFragmento implements 
         if (carros != null) {
             atualizarView();
         } else {
-            startTransacao((com.s.d.a.a.androidutils.Transacao)this);
+            startTransacao(this);
         }
     }
     @Override

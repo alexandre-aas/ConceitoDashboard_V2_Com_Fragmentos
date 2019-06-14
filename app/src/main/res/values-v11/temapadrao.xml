@@ -1,8 +1,8 @@
 <resources>
-    <style name="temapadrao" parent="Theme.AppCompat">
+    <style name="temapadrao" parent="@android:style/Theme.Holo.Light">
         <item name="android:actionBarStyle">@style/ConceitoDashboardActionBar</item>
     </style>
-    <style name="ConceitoDashboardActionBar" parent="Theme.AppCompat.DayNight.DarkActionBar">
+    <style name="ConceitoDashboardActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
         <item name="android:background">@drawable/shape_header</item>
     </style>
 </resources>
@@ -10,10 +10,10 @@
 
 <!--
 <resources>
-    <style name="temapadrao" parent="@android:style/Theme.Holo.Light">
+    <style name="temapadrao" parent="Theme.AppCompat">
         <item name="android:actionBarStyle">@style/ConceitoDashboardActionBar</item>
     </style>
-    <style name="ConceitoDashboardActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+    <style name="ConceitoDashboardActionBar" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <item name="android:background">@drawable/shape_header</item>
     </style>
 </resources>

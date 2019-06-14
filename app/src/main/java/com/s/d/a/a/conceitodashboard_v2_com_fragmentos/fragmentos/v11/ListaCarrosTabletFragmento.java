@@ -42,7 +42,7 @@ public class ListaCarrosTabletFragmento extends ListaCarrosFragmento {
         switch (item.getItemId()) {
             case R.id.menu_atualizar:
                 atualizarViewMenuAtualizar(true);
-                startTransacao((com.s.d.a.a.androidutils.Transacao)          this);
+                startTransacao(this);
                 return true;
         }
         return super.onOptionsItemSelected(item);

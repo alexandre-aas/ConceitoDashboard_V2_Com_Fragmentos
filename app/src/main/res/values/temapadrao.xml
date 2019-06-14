@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Tema padrão -->
-    <style name="temapadrao" parent="Theme.AppCompat">
+    <style name="temapadrao" parent="@android:style/Theme.Holo.Light">
         <item name="android:windowNoTitle">true</item>
     </style>
 
@@ -24,3 +24,9 @@
     </style>
 
 </resources>
+
+<!--
+ <style name="temapadrao" parent="Theme.AppCompat">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+ -->
